@@ -9,6 +9,7 @@ GAME_RESET = False
 
 MONEY = 10
 HEALTH = 100
+items = []
 
 LOCATION_ONE = "DARK FOREST"
 LOCATION_TWO = "CASTLE BAPHOMET"
@@ -144,8 +145,13 @@ while (not GAME_RESET):
                     valid_input_2 = True
                     print("That was water, nothing happens")
                     print()
-                    time.sleep(0.5)
-                    print("After drinking the water you exit the cell and infrot of you lays a dark dirt path surrounded by tall trees with only the faint shine of moonlight throught the thick leaves")
+                    time.sleep(1.25)
+                    print("After drinking the water you put the other bottle in your pocket and exit the cell. " \
+                    "Infrot of you lays a dark dirt path surrounded by tall trees with only the faint shine of moonlight throught the thick leaves")
+                    print()
+                    time.sleep(2)
+                    items.append("Bottle of liquid")
+                    print(f" You now have: {', ' .join(items)}")
                     print()
                     time.sleep(2)
                     DARK_FOREST()
