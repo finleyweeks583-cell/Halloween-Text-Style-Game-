@@ -6,8 +6,6 @@ import random
 valid_input = False
 valid_input_2 = False
 GAME_RESET = False 
-CABIN_OPTION = False 
-
 
 MONEY = 10
 HEALTH = 100
@@ -18,16 +16,12 @@ LOCATION_TWO = "CASTLE BAPHOMET"
 LOCATION_THREE = "CABIN IN THE WOODS"
 LOCATION_FOUR = "PLACEHOLDER4"
 
-def SEARCH_CABIN():
-    time.sleep(0.75)
-    print("You walk around the back of the cabin and spot a old rusted handel standing out of a pile of leaves against the back of the cabin.")
-
-
-
-
 
 def DARK_FOREST():
+    
     PATH_CHOSEN = False 
+    CABIN_OPTION = False 
+
     print("Loading.....")
     print()
     time.sleep(0.7)
@@ -91,33 +85,44 @@ def DARK_FOREST():
             print("\033[33m" + ENTER_CABIN + "\033[0m")
             time.sleep(1.5)
             print("You each the door of an old dilapidated wood cabin, The plants all around the radius of the cabin look dead")
+            print()
 
             while (not CABIN_OPTION):
                 time.sleep(1.25)
-                cabin_userinput = int("What will you do. A: Knock on the door of the cabin or B: Look around the perimeter : ").strip().upper()
+                cabin_userinput = input("What will you do. A: Knock on the door of the cabin or B: Look around the perimeter : ").strip().upper()
+                print()
 
                 if cabin_userinput == "A":
+                    CABIN_OPTION = True 
                     print("You walk up and knock on the door")
                     time.sleep(0.5)
-                    Knocks = random.randomint(1, 20)
-                    if Knocks >= 15:
+                    Knocks = random.randint(1, 10)
+                    if Knocks >= 7:
                         print("The second you knock on the door you can feel its loose and it slowly opens with a screach")
+                        print()
 
                     else:
-                        print("You knock on the door 5 times but no answer, you decide to go look around the property some more.")
-                        SEARCH_CABIN()
+                        print()
+                        print(f"You knock on the door {Knocks} times but no answer, you decide to go look around the property some more.")
+                        
 
                 elif cabin_userinput == "B":
-                    SEARCH_CABIN()
+                    CABIN_OPTION = True 
+                    print()
+                    print("Option B")
+                    
 
                 else:
-                    print("That is not a valid input")
+                    CABIN_OPTION = False
+                    print("That is not a valid input, please try again")
+                    print()
 
             
     
         else:
             PATH_CHOSEN = False
             print("That is not a valid option, please try again")
+            print()
 
 
 while (not GAME_RESET):
