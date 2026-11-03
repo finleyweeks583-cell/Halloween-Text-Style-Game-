@@ -25,8 +25,15 @@ def CABIN_SEARCH():
     print("You walk over to the pile of leaves and grab the old handel and pull as hard as you can.......")
     print()
     time.sleep(1.60)
+    print("After pulling the handel you pull up a trap door in the floor and it reveals a lader going down into the ground.")
     print()
-    print("After pulling the handel you pull up a trap door in the floor and it reveals a lader going down into the ground")
+    time.sleep(1.60)
+    print("You enter and climb down the ladder")
+    print()
+    time.sleep(0.40)
+    print("You reach the floor after 30 seconds of decending and before you is a never ending tunnel lit by candle light.")
+    print()
+    
 
 
 
@@ -76,7 +83,12 @@ def DARK_FOREST():
             time.sleep(0.5)
             ENTER_CASTLE = (pyfiglet.figlet_format(F"ENTERING {LOCATION_TWO} ! ", font = 'small'))
             print("\033[95m" + ENTER_CASTLE + "\033[0m")
-            time.sleep(1.50)
+            time.sleep(1)
+            print("COMING SOON, Please chose the RIGHT path")
+            print()
+            time.sleep(0.4)
+            PATH_CHOSEN = False
+
 
 
 
@@ -97,7 +109,7 @@ def DARK_FOREST():
             ENTER_CABIN = (pyfiglet.figlet_format(F"ENTERING {LOCATION_THREE} ! ", font = 'DOOM'))
             print("\033[33m" + ENTER_CABIN + "\033[0m")
             time.sleep(1.5)
-            print("You each the door of an old dilapidated wood cabin.")
+            print("You reach the door of an old dilapidated wood cabin.")
             print()
 
             while (not CABIN_OPTION):
@@ -115,6 +127,11 @@ def DARK_FOREST():
                         time.sleep(0.75)
                         print("The second you knock on the door you can feel its loose and it slowly opens with a screach.")
                         print()
+                        time.sleep(0.5)
+                        print("COMING SOON, please try again")
+                        print()
+                        time.sleep(0.2)
+                        CABIN_OPTION = False
 
                     else:
                         print(f"You knock on the door {Knocks} times but no answer, you decide to go look around the property some more.")
