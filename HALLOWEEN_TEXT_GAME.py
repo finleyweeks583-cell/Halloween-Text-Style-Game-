@@ -16,6 +16,12 @@ LOCATION_TWO = "CASTLE BAPHOMET"
 LOCATION_THREE = "CABIN IN THE WOODS"
 LOCATION_FOUR = "PLACEHOLDER4"
 
+def CABIN_SEARCH():
+    time.sleep(0.5)
+    print()
+    print("Test Test Test ")
+
+
 
 def DARK_FOREST():
     
@@ -95,21 +101,24 @@ def DARK_FOREST():
                 if cabin_userinput == "A":
                     CABIN_OPTION = True 
                     print("You walk up and knock on the door")
-                    time.sleep(0.5)
+                    print()
+                    time.sleep(1)
                     Knocks = random.randint(1, 10)
                     if Knocks >= 7:
+                        time.sleep(0.75)
                         print("The second you knock on the door you can feel its loose and it slowly opens with a screach")
                         print()
 
                     else:
-                        print()
                         print(f"You knock on the door {Knocks} times but no answer, you decide to go look around the property some more.")
+                        time.sleep(1)
+                        CABIN_SEARCH()
+                        
                         
 
                 elif cabin_userinput == "B":
                     CABIN_OPTION = True 
-                    print()
-                    print("Option B")
+                    CABIN_SEARCH()
                     
 
                 else:
