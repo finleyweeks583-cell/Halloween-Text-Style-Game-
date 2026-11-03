@@ -1,10 +1,12 @@
 import time 
 import pyfiglet
+import random
 
 
 valid_input = False
 valid_input_2 = False
 GAME_RESET = False 
+CABIN_OPTION = False 
 
 
 MONEY = 10
@@ -13,8 +15,14 @@ items = []
 
 LOCATION_ONE = "DARK FOREST"
 LOCATION_TWO = "CASTLE BAPHOMET"
-LOCATION_THREE = "THE CABIN IN THE WOODS"
+LOCATION_THREE = "CABIN IN THE WOODS"
 LOCATION_FOUR = "PLACEHOLDER4"
+
+def SEARCH_CABIN():
+    time.sleep(0.75)
+    print("You walk around the back of the cabin and spot a old rusted handel standing out of a pile of leaves against the back of the cabin.")
+
+
 
 
 
@@ -61,6 +69,9 @@ def DARK_FOREST():
             time.sleep(0.5)
             ENTER_CASTLE = (pyfiglet.figlet_format(F"ENTERING {LOCATION_TWO} ! ", font = 'small'))
             print("\033[95m" + ENTER_CASTLE + "\033[0m")
+            time.sleep(1.50)
+
+
 
         elif path_choice == "RIGHT":
             PATH_CHOSEN = True
@@ -78,7 +89,32 @@ def DARK_FOREST():
             time.sleep(0.5)            
             ENTER_CABIN = (pyfiglet.figlet_format(F"ENTERING {LOCATION_THREE} ! ", font = 'DOOM'))
             print("\033[33m" + ENTER_CABIN + "\033[0m")
+            time.sleep(1.5)
+            print("You each the door of an old dilapidated wood cabin, The plants all around the radius of the cabin look dead")
 
+            while (not CABIN_OPTION):
+                time.sleep(1.25)
+                cabin_userinput = int("What will you do. A: Knock on the door of the cabin or B: Look around the perimeter : ").strip().upper()
+
+                if cabin_userinput == "A":
+                    print("You walk up and knock on the door")
+                    time.sleep(0.5)
+                    Knocks = random.randomint(1, 20)
+                    if Knocks >= 15:
+                        print("The second you knock on the door you can feel its loose and it slowly opens with a screach")
+
+                    else:
+                        print("You knock on the door 5 times but no answer, you decide to go look around the property some more.")
+                        SEARCH_CABIN()
+
+                elif cabin_userinput == "B":
+                    SEARCH_CABIN()
+
+                else:
+                    print("That is not a valid input")
+
+            
+    
         else:
             PATH_CHOSEN = False
             print("That is not a valid option, please try again")
