@@ -33,6 +33,24 @@ def CABIN_SEARCH():
     time.sleep(0.40)
     print("You reach the floor after 30 seconds of decending and before you is a never ending tunnel lit by candle light.")
     print()
+    time.sleep(1)
+    LADDER_CHOICE = input ("What will you do; A: Walk down the everlasting hallway or B: Head back up the ladder and try enter the cabin: ")
+
+    if LADDER_CHOICE == "A":
+        print()
+        print("You climb back up the ladder and after reaching the surface head back to the door of the cabin, you slowly twist the old door handle and the door falls open")
+        time.sleep(2)
+
+
+
+    elif LADDER_CHOICE == "B":
+        print()
+        print("You start to walk down the hallway....")
+        print()
+        time.sleep(0.5)
+        print("After what feels like a few minutes of walking you still havent reached the end until finally after a few more minutes you reach a heavy duty metal door")
+        time.sleep(1.25)
+
     
 
 
