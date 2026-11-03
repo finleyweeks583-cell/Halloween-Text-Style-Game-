@@ -11,10 +11,23 @@ MONEY = 10
 HEALTH = 100
 items = []
 
+if HEALTH <= 0:
+    print()
+    time.sleep(2)
+    print("You Died")
+    time.sleep(0.5)
+    print("Try again")
+    time.sleep(0.5)
+    GAME_RESET = False
+
+
+
+
+
 LOCATION_ONE = "DARK FOREST"
 LOCATION_TWO = "CASTLE BAPHOMET"
 LOCATION_THREE = "CABIN IN THE WOODS"
-LOCATION_FOUR = "PLACEHOLDER4"
+LOCATION_FOUR = "The CELL...."
 
 def CABIN_SEARCH():
     time.sleep(0.5)
@@ -223,13 +236,9 @@ while (not GAME_RESET):
                 if potion_input == "1":
                     valid_input_2 = True 
                     print("That was poision.......")
-                    print()
+                    HEALTH = HEALTH - 100
                     time.sleep(2)
-                    print("You Died")
-                    time.sleep(0.5)
-                    print("Try again")
-                    time.sleep(0.5)
-                    GAME_RESET = False
+
                 
             
                 elif potion_input == "2":
