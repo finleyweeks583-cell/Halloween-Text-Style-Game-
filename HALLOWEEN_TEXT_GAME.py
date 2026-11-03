@@ -25,6 +25,7 @@ def CABIN_SEARCH():
     print("You walk over to the pile of leaves and grab the old handel and pull as hard as you can.......")
     print()
     time.sleep(1.60)
+    print()
     print("After pulling the handel you pull up a trap door in the floor and it reveals a lader going down into the ground")
 
 
