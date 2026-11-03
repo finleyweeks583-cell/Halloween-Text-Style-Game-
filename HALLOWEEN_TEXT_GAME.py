@@ -19,7 +19,13 @@ LOCATION_FOUR = "PLACEHOLDER4"
 def CABIN_SEARCH():
     time.sleep(0.5)
     print()
-    print("Test Test Test ")
+    print("You walk around the back of the cabin and spot a old rusted handel standing out of a pile of leaves.")
+    print()
+    time.sleep(2)
+    print("You walk over to the pile of leaves and grab the old handel and pull as hard as you can.......")
+    print()
+    time.sleep(1.60)
+    print("After pulling the handel you pull up a trap door in the floor and it reveals a lader going down into the ground")
 
 
 
@@ -90,7 +96,7 @@ def DARK_FOREST():
             ENTER_CABIN = (pyfiglet.figlet_format(F"ENTERING {LOCATION_THREE} ! ", font = 'DOOM'))
             print("\033[33m" + ENTER_CABIN + "\033[0m")
             time.sleep(1.5)
-            print("You each the door of an old dilapidated wood cabin, The plants all around the radius of the cabin look dead")
+            print("You each the door of an old dilapidated wood cabin.")
             print()
 
             while (not CABIN_OPTION):
@@ -106,7 +112,7 @@ def DARK_FOREST():
                     Knocks = random.randint(1, 10)
                     if Knocks >= 7:
                         time.sleep(0.75)
-                        print("The second you knock on the door you can feel its loose and it slowly opens with a screach")
+                        print("The second you knock on the door you can feel its loose and it slowly opens with a screach.")
                         print()
 
                     else:
@@ -123,14 +129,14 @@ def DARK_FOREST():
 
                 else:
                     CABIN_OPTION = False
-                    print("That is not a valid input, please try again")
+                    print("That is not a valid input, please try again!")
                     print()
 
             
     
         else:
             PATH_CHOSEN = False
-            print("That is not a valid option, please try again")
+            print("That is not a valid option, please try again!")
             print()
 
 
@@ -150,9 +156,9 @@ while (not GAME_RESET):
 
     time.sleep(2)
     print()
-    CELL_OPTION_ONE = print("Option A - Walk over to the door and leave")
+    CELL_OPTION_ONE = print("Option A - Walk over to the door and leave.")
     print()
-    CELL_OPTION_TWO = print("Option B - Search around the small cell")
+    CELL_OPTION_TWO = print("Option B - Search around the small cell.")
 
     while (not valid_input):
         print()
@@ -162,7 +168,7 @@ while (not GAME_RESET):
         if user_input_cell == "A":
             valid_input = True
             GAME_RESET = True
-            print("You exit the cell and infrot of you lays a dark dirt path surrounded by tall trees with only the faint shine of moonlight throught the thick leaves")
+            print("You exit the cell and infrot of you lays a dark dirt path surrounded by tall trees with only the faint shine of moonlight throught the thick leaves.")
             print()
             time.sleep(2)
             DARK_FOREST()
@@ -170,7 +176,7 @@ while (not GAME_RESET):
 
         elif user_input_cell == "B":
             valid_input = True 
-            print("After looking around the cell you notice a cabnet, After opening the cabnet you are presented with 2 bottles")
+            print("After looking around the cell you notice a cabnet, After opening the cabnet you are presented with 2 bottles.")
             print()
             time.sleep(1.5)
         
@@ -193,11 +199,11 @@ while (not GAME_RESET):
                 elif potion_input == "2":
                     GAME_RESET = True
                     valid_input_2 = True
-                    print("That was water, nothing happens")
+                    print("That was water, nothing happens.")
                     print()
                     time.sleep(1.25)
                     print("After drinking the water you put the other bottle in your pocket and exit the cell. " \
-                    "Infrot of you lays a dark dirt path surrounded by tall trees with only the faint shine of moonlight throught the thick leaves")
+                    "Infrot of you lays a dark dirt path surrounded by tall trees with only the faint shine of moonlight throught the thick leaves.")
                     print()
                     time.sleep(2)
                     items.append("Bottle of liquid")
@@ -208,12 +214,12 @@ while (not GAME_RESET):
                    
                 else:
                     GAME_RESET = True
-                    print("That is not a valid option, please try again")
+                    print("That is not a valid option, please try again!")
                     print()
                     valid_input_2 = False
                 
         else:
             GAME_REST = True
-            print("That is not a valid option, Please try again")
+            print("That is not a valid option, Please try again!")
             valid_input = False
 
